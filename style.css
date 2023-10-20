@@ -1,215 +1,57 @@
-table{
-    width:90%;
-    border-collapse: collapse;
-    margin-bottom: 1em;
-    margin-left: auto;margin-right: auto;
+html {
+    font-family: 'Kanit', sans-serif;
 }
 
-body{
+body {
     margin: 0;
-    background-color: #8F9961;
+    background-color: #0C3D56;
     color: black;
-    font-family: Verdana, Arial, sans-serif;
-    background-repeat: repeat-x;
+    font-weight: 100;
 }
-header{
-    text-align: center;
-    color: #fff;
-    font-size: 120%;
-    margin-top: 50px;;
-    height: 200px;
-    width: 1365px;
+
+.map-container {
+    text-align: center; /* Center the map */
+    padding: 10px;
 }
-footer{
-    font-size: .60em;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: italic;
-    padding: 1em;
-}
-#wrapper{
-    padding: 2em;
-    margin: auto; /*will help center text on screen */
-    width: 80%;
-}
-#logo{
-    height: 100px;
-    width: 1000px;
-    background-image: url("htmlImages/sictc-logo.png");
-    background-size: 100% 100%;
-    background-repeat: repeat-y;
-    margin-bottom: 50px;
- }
-#logo:hover{
-    transition: .5s ease;
-    opacity: 50%;
-}
-/* Container needed to position the button. Adjust the width as needed */
-.container {
-    position: relative;
-    width: 50%;
-  }
-  
-  /* Make the image responsive */
-  .container img {
-    width: 100%;
-    height: auto;
-  }
-  
-  /* Style the button and place it in the middle of the container/image */
-  .container .btn {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    background-color: #555;
-    color: white;
-    font-size: 16px;
-    padding: 12px 24px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  .container .btn:hover {
-    background-color: black;
-  }
-#map{
-    height: 600px;
-    width: 850px;
+
+#map {
+    top: 0;
+    height: 408px;
+    width: 695px;
     background-image: url("drawMaps/Master.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    border: 5px solid #0C3D56;
+    border: solid 5px #707F43;
+    margin: 0 auto; /* Center the map horizontally */
 }
-.classBTN{
-    width: 220px;
-    padding: 10px;
+
+.button-section {
+    text-align: center;
+}
+
+.button-container {
+    display: flex; /* Display buttons in a horizontal line */
+    justify-content: center; /* Center buttons horizontally */
+    align-items: center; /* Center buttons vertically */
+    flex-wrap: wrap; /* Allow buttons to wrap to the next line if they don't fit */
+}
+
+.classBTN {
     background-color: transparent;
     color: #fff;
-    border: none;
     font-size: 20px;
     cursor: pointer;
-}
-.classWBTN{
-    width: 220px;
-    padding: 15px;
-    border: none;
-    background-color: transparent;
-    color: #ffff;
-    font-size: 20px;
-    cursor: pointer;
-}
-.studio{
-    font-style: italic;
-}
-footer{
-    background-color: #0C3D56;
-    font-size: .60em;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: italic;
-    padding: 1em;
-    color:#fff;
+    height: 75px;
+    width: 175px;
+    margin: 5px; /* Add space between buttons */
+    border: solid 5px #707F43;
+    background-color: white;
+    color: black;
 }
 
-/* https://www.w3schools.com/jsref/event_onclick.asp */
-.dropbtn {
-    background-color: #4CAF50;
+button.classBTN:hover {
+    border: solid 5px white;
+    background-color: #FF5757;
     color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: solid 2px black;
-    -moz-box-shadow:5px 5px 5px rgba(0,0,0,0.5);
-    -webkit-box-shadow:5px 5px 5px rgba(0,0,0,0.5);
-    box-shadow:5px 5px 5px rgba(0,0,0,0.5);
-    cursor: pointer;
 }
 
-.dropbtn:hover, .dropbtn:focus {
-    background-color: #3e8e41;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #4CAF50;
-    min-width: 160px;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-}
-
-.dropdown-content a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #3e8e41;
-    color: black;
-    font-style: bold;
-    font-size:medium;
-}
-
-.show {display:block;}
-a.colour:link {color:#34CF72;}
-
-
-.dropdown li {
-    position: relative;
-    list-style: none;
-}
-
-.dropdown li a {
-    color: black;
-    text-align: center;
-    text-decoration: none;
-    display: block;
-    font-size: medium;
-}
-
-.dropdown li ul {
-    list-style: none;
-    display: none;
-    line-height: normal;
-    background-color: #4CAF50;
-}
-
-.dropdown li ul li a {
-    text-align: left;
-    color: black;
-    font-size: 14px;
-    display: block;
-    white-space: nowrap;
-    font-size: medium;
-}
-
-.dropdown li ul li a:hover {
-    background-color: #3e8e41;
-    color: black;
-    font-size: medium;
-}
-
-.dropdown li ul li ul {
-    left: 100%;
-    top: 0;
-}
-
-ul li:hover>a {
-    background-color: #3e8e41;
-    color: black !important;
-    font-size: medium;
-}
-
-ul li:hover>ul {
-    display: block;
-    font-size: medium;
-}
