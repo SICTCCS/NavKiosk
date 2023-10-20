@@ -111,11 +111,8 @@
         }
     </script>
     <main>
-        <div class="map-container">
-            <img id="map" src="drawMaps/Master.png">
-            <img src="images/qrCode.png" height="100px" width="100px">
-        </div>
-        <div class="button-section">
+        <tr>
+        <td style = "width: 235px">
             <button class="classBTN" onclick="graphicCommunication()">Graphic Communication</button>
             <button class="classBTN" onclick="culinary()">Culinary Arts</button>
             <button class="classBTN" onclick="diesel()">Diesel Service</button>
@@ -123,8 +120,11 @@
             <button class="classBTN" onclick="vet()">Veterinary Science</button>
             <button class="classBTN" onclick="autoCollision()">Automotive Collision</button>
             <button class="classBTN" onclick="radio()">Radio/TV</button>
-        </div>
-        <div class="button-section">
+        </td>
+        <td>
+            <img id="map">
+        </td>
+        <td style = "width: 235px">
             <button class="classBTN" onclick="welding()">Welding Technology</button>
             <button class="classBTN" onclick="precision()">Precision Machine</button>
             <button class="classBTN" onclick="engineering()">Engineering</button>
@@ -137,7 +137,8 @@
             <button class="classBTN" onclick="healthScience()">Health Sciences</button>
             <button class="classBTN" onclick="exercise()">Exercise</button>
             <button class="classBTN" onclick="publicSafety()">Public Safety</button>
-        </div>
+        </td>
+    </tr>
     </main>
 </body>
 </html>

@@ -21,11 +21,10 @@ body {
     background-size: 100% 100%;
     background-repeat: no-repeat;
     border: solid 5px #707F43;
-    margin: 0 auto; /* Center the map horizontally */
 }
 
 #map, .map-container img {
-    display: inline-block; /* Make images display inline in the same row */
+    display: flex; /* Make images display inline in the same row */
     vertical-align: middle; /* Center the images vertically */
     margin: 0 10px; /* Add space between the images */
 }
@@ -35,10 +34,7 @@ body {
 }
 
 .button-container {
-    display: flex; /* Display buttons in a horizontal line */
-    justify-content: center; /* Center buttons horizontally */
-    align-items: center; /* Center buttons vertically */
-    flex-wrap: wrap; /* Allow buttons to wrap to the next line if they don't fit */
+    
 }
 
 .classBTN {
