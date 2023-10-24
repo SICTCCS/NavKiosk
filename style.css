@@ -105,13 +105,13 @@ button.classBTN:hover {
 
 
 
-/* mobile */ 
-@media (max-width: 750px){
+@media screen and (min-width: 5760px) and (max-width: 5760px) {
+    
+
+    body {
+        background-color: yellow;
+    }
 
 
-.classBTN {       
-    font-size: 10px;
-}
 
-
-}
+  }
