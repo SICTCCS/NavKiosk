@@ -101,3 +101,17 @@ button.classBTN:hover {
     margin: 0;
     padding: 0;
 }
+
+
+
+
+/* mobile */ 
+@media (max-width: 750px){
+
+
+.classBTN {       
+    font-size: 15px;
+}
+
+
+}
