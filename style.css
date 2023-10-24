@@ -81,3 +81,23 @@ button.classBTN:hover {
     padding: 0;
 }
 
+.container-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    height: 100px;
+}
+
+.bottom-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.bottom-list-item {
+    margin: 0;
+    padding: 0;
+}
