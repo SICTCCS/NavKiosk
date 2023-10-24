@@ -105,13 +105,11 @@ button.classBTN:hover {
 
 
 
-@media screen and (min-width: 5760px) and (max-width: 5760px) {
+@media (min-width: 5000px) {
     
 
     body {
         background-color: yellow;
     }
 
-
-
-  }
+}
