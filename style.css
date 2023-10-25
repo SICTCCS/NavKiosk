@@ -69,6 +69,7 @@ button.classBTN:hover {
     align-items: center;
     padding: 5px;
     height: 100px;
+    padding-top: 20px;
 }
 
 .top-list {
@@ -90,6 +91,7 @@ button.classBTN:hover {
     align-items: center;
     padding: 5px;
     height: 100px;
+    padding-top: 15px;
 }
 
 .bottom-list {
