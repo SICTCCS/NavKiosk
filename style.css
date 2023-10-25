@@ -11,7 +11,7 @@ body {
 .container {
     display: flex;
     justify-content: space-between; 
-    padding: 0 20px;
+    padding: 0px;
 }
 
 .left-list, .right-list {
@@ -20,6 +20,8 @@ body {
 
 .center-image {
     flex: 2;
+    height:100%;
+    
     text-align: center;
 }
 
@@ -34,11 +36,12 @@ li {
 
 #map {
     margin-top: 25px;
-    height:416px;
-    width: 890px;
+    height:860px;
+    width: 1390px;
     background-image: url("drawMaps/Master.png");
     background-size: 100% 100%;
-    background-repeat: no-repeat;
+    background-repeat:no-repeat;
+    background-size: cover;
     border: solid 5px #707F43;
 }
 
@@ -46,8 +49,8 @@ button {
     color: #fff;
     font-size: 35px;
     cursor: pointer;
-    height: 150px;
-    width: 350px;
+    height: 120px;
+    width: 290px;
     margin: 5px; 
     border: solid 5px #707F43;
     background-color: white;
