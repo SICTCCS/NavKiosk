@@ -35,8 +35,8 @@ li {
 
 #map {
     margin-top: 25px;
-    height: 408px;
-    width: 695px;
+    height:816px;
+    width: 1390px;
     background-image: url("drawMaps/Master.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
