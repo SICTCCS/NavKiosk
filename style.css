@@ -104,15 +104,3 @@ button.classBTN:hover {
     margin: 0;
     padding: 0;
 }
-
-
-
-
-
-@media (min-width: 5000px) {
-    
-    body {
-        background-color: pink;
-    }
-
-}
