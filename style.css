@@ -1,4 +1,4 @@
-@media (max-width: 2900px) {
+@media (max-width: 3500px) {
 html{
     font-family: 'Kanit', sans-serif;
 }
@@ -107,9 +107,8 @@ button.classBTN:hover {
 
 
 
-@media (min-width: 3000px) {
+@media (min-width: 3900px) {
     
-
     body {
         background-color: yellow;
     }
