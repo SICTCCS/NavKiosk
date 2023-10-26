@@ -113,7 +113,7 @@
         font-family: 'Kanit', sans-serif;
     }
     body {
-        background-color: #0C3D56;
+        background-color: cadetblue;
         margin: 0;
         padding: 0;
     }
@@ -139,8 +139,8 @@
     }
     #map {
         margin-top: 25px;
-        height:430px;
-        width: 695px;
+        height:330px;
+        width: 595px;
         background-image: url("drawMaps/Master.png");
         background-size: 100% 100%;
         background-repeat:no-repeat;
