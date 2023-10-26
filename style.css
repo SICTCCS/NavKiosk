@@ -95,8 +95,11 @@
 
 @media (min-width: 200px){
     html{
-    background-color: green;
-}
+        background-color: green;
+    }
+    body{
+        background-color: green;
+    }
 }
 
 
