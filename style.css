@@ -108,7 +108,7 @@
 
 
 /* mobile */
-@media (max-width: 750px){
+@media (max-width: 1023px){
     html{
         font-family: 'Kanit', sans-serif;
     }
