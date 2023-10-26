@@ -1,3 +1,4 @@
+/* board */
 @media (min-width: 1024px) {
     html{
         font-family: 'Kanit', sans-serif;
@@ -18,7 +19,6 @@
     .center-image {
         flex: 2;
         height:100%;
-        
         text-align: center;
     }
     ul {
@@ -107,13 +107,13 @@
 
 
 
-
+/* mobile */
 @media (max-width: 750px){
     html{
         font-family: 'Kanit', sans-serif;
     }
     body {
-        background-color: yellow;
+        background-color: #0C3D56;
         margin: 0;
         padding: 0;
     }
@@ -128,7 +128,6 @@
     .center-image {
         flex: 2;
         height:100%;
-        
         text-align: center;
     }
     ul {
@@ -140,8 +139,8 @@
     }
     #map {
         margin-top: 25px;
-        height:860px;
-        width: 1390px;
+        height:430px;
+        width: 695px;
         background-image: url("drawMaps/Master.png");
         background-size: 100% 100%;
         background-repeat:no-repeat;
@@ -150,10 +149,10 @@
     }
     button {
         color: #fff;
-        font-size: 35px;
+        font-size: 17.5px;
         cursor: pointer;
-        height: 100px;
-        width: 290px;
+        height: 50px;
+        width: 145px;
         margin: 5px; 
         border: solid 5px #707F43;
         background-color: white;
