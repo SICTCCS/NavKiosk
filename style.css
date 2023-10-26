@@ -1,5 +1,5 @@
 /* Promethean board */
-@media (orientation: landscape) {
+@media (min-width: 1024px) {
     html{
         font-family: 'Kanit', sans-serif;
     }
