@@ -1,5 +1,3 @@
-/* Promethean board */
-@media (min-width: 1024px) {
     html{
         font-family: 'Kanit', sans-serif;
     }
@@ -92,7 +90,7 @@
         margin: 0;
         padding: 0;
     }
-}
+
 
 
 
