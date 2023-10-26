@@ -97,7 +97,11 @@
 
 
 
-
+@media (orientation: portrait) {
+    body {
+        background-color: pink;
+    }
+}
 
 
 
@@ -108,7 +112,7 @@
 
 
 /* mobile */
-@media (max-width: 1023px){
+/* @media (max-width: 1023px){
     html{
         font-family: 'Kanit', sans-serif;
     }
@@ -201,4 +205,4 @@
         margin: 0;
         padding: 0;
     }
-}
+} */
