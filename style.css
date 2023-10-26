@@ -1,5 +1,5 @@
 /* Promethean board */
-@media (min-width: 1024px) {
+@media (orientation: landscape) {
     html{
         font-family: 'Kanit', sans-serif;
     }
@@ -92,31 +92,14 @@
         margin: 0;
         padding: 0;
     }
-    .landscape-message {
-        display: none;
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 10px;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 9999;
-    }
 }
 
 
 
 
 @media (orientation: portrait) {
-    .landscape-message {
-        display: block;
-    }
-
     body {
-        display: none;
-        background-color: pink;
+        background-color: orange;
     }
 }
 
@@ -125,99 +108,3 @@
 
 
 
-
-/* mobile */
-/* @media (max-width: 1023px){
-    html{
-        font-family: 'Kanit', sans-serif;
-    }
-    body {
-        background-color: cadetblue;
-        margin: 0;
-        padding: 0;
-    }
-    .container {
-        display: flex;
-        justify-content: space-between; 
-        padding: 0px;
-    }
-    .left-list, .right-list {
-        padding: 20px;
-    }
-    .center-image {
-        flex: 2;
-        height:100%;
-        text-align: center;
-    }
-    ul {
-        list-style-type: none;
-        padding: 0;
-    }
-    li {
-        margin-bottom: 5px;
-    }
-    #map {
-        margin-top: 25px;
-        height:330px;
-        width: 595px;
-        background-image: url("drawMaps/Master.png");
-        background-size: 100% 100%;
-        background-repeat:no-repeat;
-        background-size: cover;
-        border: solid 5px #707F43;
-    }
-    button {
-        color: #fff;
-        font-size: 17.5px;
-        cursor: pointer;
-        height: 50px;
-        width: 145px;
-        margin: 5px; 
-        border: solid 5px #707F43;
-        background-color: white;
-        color: black;
-    }
-    button.classBTN:hover {
-        border: solid 5px white;
-        background-color: #FF5757;
-        color: white;
-    }
-    .container-top {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 5px;
-        height: 100px;
-        padding-top: 20px;
-    }
-    .top-list {
-        list-style-type: none;
-        padding: 0;
-        display: flex; 
-        justify-content: center; 
-        align-items: center; 
-    }
-    .top-list-item {
-        margin: 0;
-        padding: 0;
-    }
-    .container-bottom {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 5px;
-        height: 100px;
-        padding-top: 35px;
-    }
-    .bottom-list {
-        list-style-type: none;
-        padding: 0;
-        display: flex; 
-        justify-content: center; 
-        align-items: center; 
-    }
-    .bottom-list-item {
-        margin: 0;
-        padding: 0;
-    }
-} */
