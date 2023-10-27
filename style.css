@@ -140,8 +140,8 @@
     }
     #map {
         margin-top: 25px;
-        height:1720px;
-        width: 2780px;
+        height:1520px;
+        width: 2580px;
         background-image: url("drawMaps/Master.png");
         background-size: 100% 100%;
         background-repeat:no-repeat;
