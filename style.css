@@ -172,6 +172,7 @@
         justify-content: center;
         align-items: center;
         height: 150px;
+        margin-bottom: 3000px;
     }
     .bottom-list {
         list-style-type: none;
