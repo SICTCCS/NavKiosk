@@ -105,6 +105,7 @@
         background-color: #0C3D56;
         margin: 0;
         padding: 0;
+        margin-bottom: 6000px;
     }
     .container {
         display: flex;
@@ -172,7 +173,6 @@
         justify-content: center;
         align-items: center;
         height: 150px;
-        margin-bottom: 3000px;
     }
     .bottom-list {
         list-style-type: none;
