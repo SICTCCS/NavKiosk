@@ -1,6 +1,8 @@
 uMap is the website used to make this map:  https://umap.openstreetmap.fr/en/map/new/#18/38.01158/-87.53037
 
 The main map editing tools you'd want to use are "draw a line" and "draw a polygon"
+![drawtools](./images/drawtools.png)
+
 These allow you to put rooms into a shape and color it and give it a description, image, etc.  
 Lines are mostly useful for drawing paths.  
 
