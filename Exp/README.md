@@ -3,6 +3,9 @@ uMap is the website used to make this map:  https://umap.openstreetmap.fr/en/map
 The main map editing tools you'd want to use are "draw a line" and "draw a polygon"
 <img src="./images/drawtools.png" width="500" height="300">
 
+<img src="./images/drawingshape.png" width="350" height="300">
+
+<img src="./images/features.png" width="200" height="500">
 These allow you to put rooms into a shape and color it and give it a description, image, etc.  
 Lines are mostly useful for drawing paths.  
 
