@@ -1,6 +1,6 @@
 uMap is the website used to make this map:  https://umap.openstreetmap.fr/en/map/new/#18/38.01158/-87.53037
 
-<h4>* The main map editing tools you'd want to use are "draw a line" and "draw a polygon"</h4>
+* <h4>The main map editing tools you'd want to use are "draw a line" and "draw a polygon"</h4>
 <img src="./images/drawtools.png" width="500" height="300">
 <h4>Every click makes a corner of the polygon you're making(if you selected the polygon tool)</h4>
 <img src="./images/makingshape.png" width="350" height="300">
