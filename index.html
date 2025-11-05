@@ -6,103 +6,150 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""></script>
     <title>Nav Kiosk</title>
 </head>
 <body>
     <script>
+        function resetMapToImage() {
+            var mapDiv = document.getElementById("map");
+            if (mapInitialized) {
+                var img = document.createElement('img');
+                img.id = 'map';
+                mapDiv.parentNode.replaceChild(img, mapDiv);
+                mapInitialized = false;
+            }
+            return document.getElementById("map");
+        }
+
         function buildingConstruction(){
-            var img = document.getElementById("map");
+            var img = resetMapToImage();
             img.src="drawMaps/BuildingConstruction.png";
             return false;
         }
         function graphicCommunication(){
-            var img = document.getElementById("map");
+            var img = resetMapToImage();
             img.src="drawMaps/GraphicCommunication.png";
             return false;
         }
         function hvac(){
-            var img = document.getElementById("map");
+            var img = resetMapToImage();
             img.src="drawMaps/HVAC.png";
             return false;
         }
         function cs(){
-            var img = document.getElementById("map");
+            var img = resetMapToImage();
             img.src="drawMaps/CompScience.png";
             return false;
         }
         function cyberSecurity(){
-            var img = document.getElementById("map");
+            var img = resetMapToImage();
             img.src="drawMaps/Cybersecurity.png";
             return false;
         }
         function electricity(){
-            var img = document.getElementById("map");
+            var img = resetMapToImage();
             img.src="drawMaps/Electricity.png";
             return false;
         }
         function publicSafety(){
-            var img = document.getElementById("map");
+            var img = resetMapToImage();
             img.src="drawMaps/PublicSafety.png";
             return false;
         }
         function exercise(){
-            var img = document.getElementById("map");
+            var img = resetMapToImage();
             img.src="drawMaps/Exercise.png";
             return false;
         }
         function welding(){
-            var img = document.getElementById("map");
+            var img = resetMapToImage();
             img.src="drawMaps/Welding.png";
             return false;
         }
         function precision(){
-            var img = document.getElementById("map");
+            var img = resetMapToImage();
             img.src="drawMaps/Precision.png";
             return false;
         }
         function engineering(){
-            var img = document.getElementById("map");
+            var img = resetMapToImage();
             img.src="drawMaps/Engineering.png";
             return false;
         }
         function diesel(){
-            var img = document.getElementById("map");
+            var img = resetMapToImage();
             img.src="drawMaps/DieselService.png";
             return false;
         }
         function vet(){
-            var img = document.getElementById("map");
+            var img = resetMapToImage();
             img.src="drawMaps/VetScience.png";
             return false;
         }
         function radio(){
-            var img = document.getElementById("map");
+            var img = resetMapToImage();
             img.src="drawMaps/Radio.png";
             return false;
         }
         function autoCollision(){
-            var img = document.getElementById("map");
+            var img = resetMapToImage();
             img.src="drawMaps/AutoCollision.png";
             return false;
         }
         function autoService(){
-            var img = document.getElementById("map");
+            var img = resetMapToImage();
             img.src="drawMaps/AutomotiveService.png";
             return false;
         }
         function culinary(){
-            var img = document.getElementById("map");
+            var img = resetMapToImage();
             img.src="drawMaps/CulinaryArts.png";
             return false;
         }
         function advManufacturing(){
-            var img = document.getElementById("map");
+            var img = resetMapToImage();
             img.src="drawMaps/AdvManufacturing.png";
             return false;
         }
         function healthScience(){
-            var img = document.getElementById("map");
+            var img = resetMapToImage();
             img.src="drawMaps/HealthSciences.png";
+            return false;
+        }
+        var mapInitialized = false;
+        function nav(){
+            var mapDiv = document.getElementById("map");
+            if (!mapInitialized) {
+                var newMapDiv = document.createElement('div');
+                newMapDiv.id = 'map';
+                newMapDiv.className = 'nav-active';
+                mapDiv.parentNode.replaceChild(newMapDiv, mapDiv);
+                var map = L.map('map', {
+                    zoomControl: false,
+                    attributionControl: false
+                }).setView([38.01194, -87.53088], 18);
+                L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    maxZoom: 19,
+                    minZoom: 17
+                }).addTo(map);
+                setTimeout(function() {
+                    map.invalidateSize();
+                }, 100);
+                mapInitialized = true;
+                map.locate({ setView: false, maxZoom: 18, enableHighAccuracy: true });
+                map.on('locationfound', function(e) {
+                    L.marker(e.latlng).addTo(map);
+                    L.circle(e.latlng, e.accuracy).addTo(map);
+                });
+                map.setMaxBounds(map.getBounds().pad(0.15));
+                // map.options.maxBoundsViscosity = 1.0;
+            }
             return false;
         }
     </script>
@@ -123,6 +170,7 @@
                     <li><button class="classBTN" onclick="autoCollision()">Automotive Collision</button></li>
                     <li><button class="classBTN" onclick="vet()">Veterinary Science</button></li>
                     <li><button class="classBTN" onclick="radio()">Radio/TV</button></li>
+                    <li><button class="navBTN" onclick="nav()">Navigation</button></li>
                 </ul>
             </div>
             <div class="center-image">
@@ -140,7 +188,6 @@
                 </ul>
             </div>
         </div>
-        <div class="container-bottom">
             <ul class="bottom-list">
                 <li><button class="classBTN" onclick="hvac()">HVAC-R</button></li>
                 <li><button class="classBTN" onclick="healthScience()">Health Sciences</button></li>

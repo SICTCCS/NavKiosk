@@ -1,0 +1,86 @@
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+<style>
+    #map { height: 100%; }
+</style>
+ <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+      <div id="map"></div>
+<script>
+    var map = L.map('map').setView([38.01194, -87.53088], 18);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+
+// --- User location: request geolocation, show marker + accuracy circle, and add a locate button
+// Note: For geolocation to work reliably browsers require HTTPS or localhost.
+// We attempt to get the user's current position once on load and provide a small control
+// so the user can re-center to their location.
+(function(){
+    var userMarker = null;
+    var accuracyCircle = null;
+
+    function onLocationSuccess(pos) {
+        var lat = pos.coords.latitude;
+        var lng = pos.coords.longitude;
+        var accuracy = pos.coords.accuracy || 0;
+
+        // Remove previous overlays
+        if (userMarker) { map.removeLayer(userMarker); }
+        if (accuracyCircle) { map.removeLayer(accuracyCircle); }
+
+        userMarker = L.marker([lat, lng], {title: 'Your location'}).addTo(map);
+        accuracyCircle = L.circle([lat, lng], {radius: accuracy, color: '#136aec', fillColor: '#136aec', fillOpacity: 0.15}).addTo(map);
+
+        // Center map on user location with fit to accuracy
+        try {
+            var accuracyBounds = accuracyCircle.getBounds();
+            map.fitBounds(accuracyBounds.pad(0.5));
+        } catch (e) {
+            map.setView([lat, lng], 16);
+        }
+    }
+
+    function onLocationError(err) {
+        console.warn('Geolocation error:', err && err.message ? err.message : err);
+        // Don't show an alert by default; optionally show a popup on the map
+        map.closePopup();
+        map.openPopup('Unable to access your location. Make sure location services are enabled and this page is served over HTTPS or localhost.').setLatLng(map.getCenter());
+    }
+
+    function locateOnce() {
+        if (!navigator.geolocation) {
+            onLocationError({message: 'Geolocation not supported by this browser.'});
+            return;
+        }
+        navigator.geolocation.getCurrentPosition(onLocationSuccess, onLocationError, {enableHighAccuracy: true, maximumAge: 10000, timeout: 10000});
+    }
+
+    // Add a simple Leaflet control button to re-locate
+    var locateControl = L.Control.extend({
+        options: { position: 'topleft' },
+        onAdd: function () {
+            var container = L.DomUtil.create('div', 'leaflet-bar leaflet-control');
+            var link = L.DomUtil.create('a', '', container);
+            link.href = '#';
+            link.title = 'Locate me';
+            link.innerHTML = '\u25C9'; // simple target-ish glyph
+
+            L.DomEvent.on(link, 'click', L.DomEvent.stopPropagation)
+                      .on(link, 'click', L.DomEvent.preventDefault)
+                      .on(link, 'click', function () { locateOnce(); });
+
+            return container;
+        }
+    });
+
+    map.addControl(new locateControl());
+
+    // Try locating once on load
+    locateOnce();
+})();
+</script>
