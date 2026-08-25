@@ -138,6 +138,29 @@
                     maxZoom: 19,
                     minZoom: 17
                 }).addTo(map);
+                
+                // Polygon Zone - Start
+                
+                    // Define coordinates [lat, lng]
+                    var zoneCoords = [
+                            [38.011015,-87.530194],
+                            [38.011140,-87.529956],
+                            [38.011252,-87.530101],
+                            [38.011101,-87.530323]
+                                    ];
+
+                    // Create polygon with style options
+                    var polygon = L.polygon(zoneCoords, {
+                        color: 'red',
+                        fillColor: '#f03',
+                        fillOpacity: 0.5
+                    }).addTo(map);
+
+
+
+
+                // Polygon Zone - Stop
+
                 setTimeout(function() {
                     map.invalidateSize();
                 }, 100);
