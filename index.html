@@ -285,6 +285,19 @@
                         fillColor: '#f03',
                         fillOpacity: 0.5
                     }).addTo(map);
+
+                    var hvacCoords = [
+                            [38.011345,-87.531586],
+                            [38.011333,-87.531119],
+                            [38.011165,-87.531283],
+                            [38.011343,-87.531578]
+                                    ];
+
+                    var hvacClass = L.polygon(hvacCoords, {
+                        color: 'red',
+                        fillColor: '#f03',
+                        fillOpacity: 0.5
+                    }).addTo(map);
                 // Polygon Zone - Stop
 
                 setTimeout(function() {
