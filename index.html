@@ -122,7 +122,14 @@
             img.src="drawMaps/HealthSciences.png";
             return false;
         }
+        function cosmetology(){
+            var img = resetMapToImage();
+            img.src="drawMaps/Cosmetology.png";
+            return false;
+        }
+        
         var mapInitialized = false;
+        /*
         function nav(){
             var mapDiv = document.getElementById("map");
             if (!mapInitialized) {
@@ -314,6 +321,7 @@
             }
             return false;
         }
+    */
     </script>
     <main>
         <div class="container-top">
@@ -332,7 +340,7 @@
                     <li><button class="classBTN" onclick="autoCollision()">Automotive Collision</button></li>
                     <li><button class="classBTN" onclick="vet()">Veterinary Science</button></li>
                     <li><button class="classBTN" onclick="radio()">Radio/TV</button></li>
-                    <li><button class="navBTN" onclick="nav()">Navigation</button></li>
+                    <li><button class="classBTN" onclick="cosmetology()">Cosmetology</button></li>
                 </ul>
             </div>
             <div class="center-image">

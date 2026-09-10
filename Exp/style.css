@@ -35,7 +35,7 @@
         margin-top: 10px;
         height: 700px;
         width: 960px;
-        background-image: url("drawMaps/Master.png");
+        background-image: url("drawMaps/UpdatedMaster.png");
         /* force the background to exactly fill the element's width and height */
         background-size: 100% 100%;
         background-position: center top;
@@ -79,22 +79,6 @@
     button.classBTN:hover {
         border: solid 5px white;
         background-color: #FF5757;
-        color: white;
-    }
-    button.navBTN {
-        color: #fff;
-        font-size: 35px;
-        cursor: pointer;
-        height: 100px;
-        width: 290px;
-        margin: 5px; 
-        border: solid 5px #707F43;
-        background-color: #bdc4a8;
-        color: rgb(47, 66, 45);
-    }
-    button.navBTN:hover {
-        border: solid 5px white;
-        background-color: #a5c93a;
         color: white;
     }
     .container-top {
@@ -172,7 +156,7 @@
     #map {
         height: 1520px;
         width: 2580px;
-        background-image: url("drawMaps/Master.png");
+        background-image: url("drawMaps/UpdatedMaster.png");
         background-size: 100% 100%;
         background-position: center top;
         background-repeat: no-repeat;
