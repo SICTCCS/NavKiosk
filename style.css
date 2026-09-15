@@ -35,7 +35,7 @@
         margin-top: 10px;
         height: 700px;
         width: 960px;
-        background-image: url("drawMaps/Master.png");
+        background-image: url("drawMaps/UpdatedMaster.png");
         /* force the background to exactly fill the element's width and height */
         background-size: 100% 100%;
         background-position: center top;
@@ -160,7 +160,7 @@
     #map {
         height: 1520px;
         width: 2580px;
-        background-image: url("drawMaps/Master.png");
+        background-image: url("drawMaps/UpdatedMaster.png");
         background-size: 100% 100%;
         background-position: center top;
         background-repeat: no-repeat;
