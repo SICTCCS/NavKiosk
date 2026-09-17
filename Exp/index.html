@@ -50,12 +50,13 @@
 </head>
 
 <body>
+    <div style="display: flexbox;"><h2 id="welcome">Welcome!</h2></div>
     <div id="map"></div>
     <script>
         //      This section is commented out 
                 var map = L.map('map', {
                     zoomControl: false,
-                    attributionControl: false
+                    attributionControl: true
                 }).setView([38.01194, -87.53088], 18);
                 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
                     maxZoom: 22,
@@ -225,9 +226,72 @@
                 // Polygon Zone - Stop
 
                 // Marker Zone - Start
+
                     var culinaryMark = L.marker([38.011538,-87.529983]).addTo(map); // Make marker
                     culinaryMark.bindPopup("<h1>Culinary Arts</h1>");   // Make popup
+
+                    var assemblyHallMark = L.marker([38.011322,-87.529711]).addTo(map);
+                    assemblyHallMark.bindPopup("<h1>Assembly Hall</h1>");
+
+                    var criminalJusticeMark = L.marker([38.011441,-87.530394]).addTo(map);
+                    criminalJusticeMark.bindPopup("<h1>Criminal Justice</h1>");
+
+                    var architectureMark = L.marker([38.011333,-87.530483]).addTo(map);
+                    architectureMark.bindPopup("<h1>Architecture & Engineering Design Technology</h1>");
+
+                    var officeMark = L.marker([38.011114,-87.530140]).addTo(map);
+                    officeMark.bindPopup("<h1>Administration Office</h1>");
+
+                    var advManufacturingMark = L.marker([38.011005,-87.530795]).addTo(map);
+                    advManufacturingMark.bindPopup("<h1>Advanced Manufacturing Technology</h1>");
+
+                    var precisionMark = L.marker([38.010931,-87.530686]).addTo(map);
+                    precisionMark.bindPopup("<h1>Precision Machine Metalworking Technology</h1>");
+
+                    var weldingMark = L.marker([38.010801,-87.530533]).addTo(map);
+                    weldingMark.bindPopup("<h1>Welding Technology</h1>");
+
+                    var electricMark = L.marker([38.011226,-87.531059]).addTo(map);
+                    electricMark.bindPopup("<h1>Electrical Technology</h1>");
+
+                    var buildingMark = L.marker([38.011333,-87.531361]).addTo(map);
+                    buildingMark.bindPopup("<h1>Building Construction Technology</h1>");
+
+                    var hvacMark = L.marker([38.011470,-87.531580]).addTo(map);
+                    hvacMark.bindPopup("<h1>HVAC-R and Energy Systems</h1>");
+
+                    var exerciseMark = L.marker([38.011585,-87.531763]).addTo(map);
+                    exerciseMark.bindPopup("<h1>Excercise Science</h1>");
+
+                    var compSciMark = L.marker([38.011586,-87.530930]).addTo(map);
+                    compSciMark.bindPopup("<h1>Computer Science Software Development</h1>");
+
+                    var cyberMark = L.marker([38.011449,-87.530803]).addTo(map);
+                    cyberMark.bindPopup("<h1>Cybersecurity</h1>");
+
+                    var cosmetologyMark = L.marker([38.011435,-87.529372]).addTo(map);
+                    cosmetologyMark.bindPopup("<h1>Cosmetology</h1>");
+
+                    var dieselMark = L.marker([38.012015,-87.529500]).addTo(map);
+                    dieselMark.bindPopup("<h1>Diesel Service Technology</h1>");
+
+                    var autoServiceMark = L.marker([38.012354,-87.529578]).addTo(map);
+                    autoServiceMark.bindPopup("<h1>Automotive Service Technology</h1>");
+
+                    var autoCollisionMark = L.marker([38.012612,-87.529781]).addTo(map);
+                    autoCollisionMark.bindPopup("<h1>Automotive Collision Repair Technology</h1>");
+
+                    var mediaMark = L.marker([38.012611,-87.530243]).addTo(map);
+                    mediaMark.bindPopup("<h1>Media Communication and Broadcasting</h1>");
+
+                    var vetMark = L.marker([38.012388,-87.530100]).addTo(map);
+                    vetMark.bindPopup("<h1>Veterinary Science</h1>");
+
+                    
+
+
                 // Marker Zone - Stop
+
                 setTimeout(function() {
                     map.invalidateSize();
                 }, 100);
@@ -240,8 +304,8 @@
                 map.setMaxBounds(map.getBounds().pad(0.15));
                 // map.options.maxBoundsViscosity = 1.0;
     </script>
-    <!--<iframe id="iframe" allowfullscreen allow="geolocation *" src="//umap.openstreetmap.fr/en/map/openhousemapsictc_1446596?scaleControl=false&miniMapControl=false&scrollWheelZoom=false&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=true"></iframe>
--->
+    <!-- the below code is outdated and, while it allowed easier popups for the classes and easier configuration, it disabled any tracking functionality. I have left this here for any future reference whatsoever. -->
+    <!--<iframe id="iframe" allowfullscreen allow="geolocation *" src="//umap.openstreetmap.fr/en/map/openhousemapsictc_1446596?scaleControl=false&miniMapControl=false&scrollWheelZoom=false&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=true"></iframe>-->
     <div id="btns">
         <a href="https://sictc.evscschools.com/" style="width:50%;"><button>sictc.com</button></a>
         <a href="https://applytosictc.com/"><button>Apply Now!</button></a>

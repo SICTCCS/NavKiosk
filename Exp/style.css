@@ -121,7 +121,17 @@
         padding: 0;
     }
 
+     /* This is for controlling the attribution (credit)
+    font size on the mobile webpage map */
+    .leaflet-control-attribution{
+        font-size: 15px;
+    }
 
+    #welcome {
+        font-size: 5vh;
+        margin-bottom: 1vh;
+        text-align: center;
+    }
 
 
 
