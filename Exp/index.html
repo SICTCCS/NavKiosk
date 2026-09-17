@@ -53,7 +53,6 @@
     <div style="display: flexbox;"><h2 id="welcome">Welcome!</h2></div>
     <div id="map"></div>
     <script>
-        //      This section is commented out 
                 var map = L.map('map', {
                     zoomControl: false,
                     attributionControl: true
@@ -64,6 +63,15 @@
                     attribution:'&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> | SICTC CS Class'
                 }).addTo(map);
                 
+                setTimeout(function() {
+                    map.invalidateSize();
+                }, 100);
+                map.locate({ setView: true, maxZoom: 18, enableHighAccuracy: true , follow: true});
+                map.on('locationfound', function(e) {
+                    L.marker(e.latlng).addTo(map);
+                    L.circle(e.latlng, e.accuracy).addTo(map);
+                });
+                map.setMaxBounds(map.getBounds().pad(0.15));
                 // Polygon Zone - Start
                 
                     // Define coordinates [lat, lng]
@@ -292,16 +300,7 @@
 
                 // Marker Zone - Stop
 
-                setTimeout(function() {
-                    map.invalidateSize();
-                }, 100);
-                mapInitialized = true;
-                map.locate({ setView: false, maxZoom: 18, enableHighAccuracy: true });
-                map.on('locationfound', function(e) {
-                    L.marker(e.latlng).addTo(map);
-                    L.circle(e.latlng, e.accuracy).addTo(map);
-                });
-                map.setMaxBounds(map.getBounds().pad(0.15));
+                
                 // map.options.maxBoundsViscosity = 1.0;
     </script>
     <!-- the below code is outdated and, while it allowed easier popups for the classes and easier configuration, it disabled any tracking functionality. I have left this here for any future reference whatsoever. -->
