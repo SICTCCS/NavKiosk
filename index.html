@@ -15,7 +15,7 @@
     <title>Nav Kiosk</title>
 </head>
 <body>
-    <script>
+<script>
         function resetMapToImage() {
             var mapDiv = document.getElementById("map");
             if (mapInitialized) {
@@ -128,8 +128,8 @@
             return false;
         }
         
+        //      This section is commented out as it is now deprecated 
         var mapInitialized = false;
-        /*
         function nav(){
             var mapDiv = document.getElementById("map");
             if (!mapInitialized) {
@@ -145,183 +145,9 @@
                     maxZoom: 19,
                     minZoom: 17
                 }).addTo(map);
-                
-                // Polygon Zone - Start
-                
-                    // Define coordinates [lat, lng]
-                    var officeCoords = [            // right-click on a point on the map in the actual openstreetmap website and in the menu you can copy the coordinates of that point
-                            [38.011015,-87.530194],
-                            [38.011140,-87.529956],
-                            [38.011252,-87.530101],
-                            [38.011101,-87.530323]  // you can add more points by continuing the array
-                                    ];
-
-                    // Create polygon with style options
-                    var office = L.polygon(officeCoords, {  // this actually adds the polygon to the map, the variable above this one simply defines the coordinates at where it will be added
-                        color: 'red',   // outline color
-                        fillColor: '#f03',
-                        fillOpacity: 0.5
-                    }).addTo(map);
-
-                    var auditoriumCoords = [
-                            [38.011297,-87.529922],
-                            [38.011438,-87.529534],
-                            [38.011346,-87.529487],
-                            [38.011299,-87.529684],
-                            [38.011282,-87.529673],
-                            [38.011208,-87.529824]
-                                    ];
-
-                    var auditorium = L.polygon(auditoriumCoords, {
-                        color: 'red',
-                        fillColor: '#f03',
-                        fillOpacity: 0.5
-                    }).addTo(map);
-
-                    var culinaryCoords = [
-                            [38.011484,-87.530226],
-                            [38.011513,-87.530179],
-                            [38.011594,-87.530205],
-                            [38.011650,-87.530172],
-                            [38.011624,-87.530061],
-                            [38.011686,-87.530026],
-                            [38.011648,-87.529893],
-                            [38.011695,-87.529836],
-                            [38.011518,-87.529690],
-                            [38.011329,-87.530019]
-                                    ];
-
-                    var culinaryClass = L.polygon(culinaryCoords, {
-                        color: 'red',
-                        fillColor: '#f03',
-                        fillOpacity: 0.5
-                    }).addTo(map);
-
-                    var crimeCoords = [
-                            [38.011416,-87.530459],
-                            [38.011505,-87.530451],
-                            [38.011504,-87.530367],
-                            [38.011453,-87.530284],
-                            [38.011386,-87.530398]
-                                    ];
-
-                    var crimeClass = L.polygon(crimeCoords, {
-                        color: 'red',
-                        fillColor: '#f03',
-                        fillOpacity: 0.5
-                    }).addTo(map);
-
-                    var architectureCoords = [
-                            [38.011296,-87.530580],
-                            [38.011312,-87.530556],
-                            [38.011413,-87.530553],
-                            [38.011413,-87.530463],
-                            [38.011387,-87.530402],
-                            [38.011332,-87.530399],
-                            [38.011278,-87.530427]
-                            
-                                    ];
-
-                    var architectureClass = L.polygon(architectureCoords, {
-                        color: 'red',
-                        fillColor: '#f03',
-                        fillOpacity: 0.5
-                    }).addTo(map);
-
-                    var manufacturingCoords = [
-                            [38.011183,-87.530760],
-                            [38.011079,-87.530619],
-                            [38.010846,-87.530866],
-                            [38.010935,-87.531006]
-                                    ];
-
-                    var manufacturingClass = L.polygon(manufacturingCoords, {
-                        color: 'red',
-                        fillColor: '#f03',
-                        fillOpacity: 0.5
-                    }).addTo(map);
-
-                    var precisionCoords = [
-                            [38.011077,-87.530616],
-                            [38.010998,-87.530489],
-                            [38.010767,-87.530733],
-                            [38.010843,-87.530856]
-                                    ];
-
-                    var precisionClass = L.polygon(precisionCoords, {
-                        color: 'red',
-                        fillColor: '#f03',
-                        fillOpacity: 0.5
-                    }).addTo(map);
-
-                    var precisionCoords = [
-                            [38.010995,-87.530489],
-                            [38.010898,-87.530347],
-                            [38.010666,-87.530573],
-                            [38.010763,-87.530728]
-                                    ];
-
-                    var precisionClass = L.polygon(precisionCoords, {
-                        color: 'red',
-                        fillColor: '#f03',
-                        fillOpacity: 0.5
-                    }).addTo(map);
-
-                    var electricityCoords = [
-                            [38.011330,-87.531116],
-                            [38.011213,-87.530915],
-                            [38.011137,-87.530986],
-                            [38.011256,-87.531189]
-                                    ];
-
-                    var electricityClass = L.polygon(electricityCoords, {
-                        color: 'red',
-                        fillColor: '#f03',
-                        fillOpacity: 0.5
-                    }).addTo(map);
-
-                    var buildingCoords = [
-                            [38.011507,-87.531424],
-                            [38.011333,-87.531119],
-                            [38.011165,-87.531283],
-                            [38.011343,-87.531578]
-                                    ];
-
-                    var buildingClass = L.polygon(buildingCoords, {
-                        color: 'red',
-                        fillColor: '#f03',
-                        fillOpacity: 0.5
-                    }).addTo(map);
-
-                    var hvacCoords = [
-                            [38.011345,-87.531586],
-                            [38.011333,-87.531119],
-                            [38.011165,-87.531283],
-                            [38.011343,-87.531578]
-                                    ];
-
-                    var hvacClass = L.polygon(hvacCoords, {
-                        color: 'red',
-                        fillColor: '#f03',
-                        fillOpacity: 0.5
-                    }).addTo(map);
-                // Polygon Zone - Stop
-
-                setTimeout(function() {
-                    map.invalidateSize();
-                }, 100);
-                mapInitialized = true;
-                map.locate({ setView: false, maxZoom: 18, enableHighAccuracy: true });
-                map.on('locationfound', function(e) {
-                    L.marker(e.latlng).addTo(map);
-                    L.circle(e.latlng, e.accuracy).addTo(map);
-                });
-                map.setMaxBounds(map.getBounds().pad(0.15));
-                // map.options.maxBoundsViscosity = 1.0;
             }
             return false;
         }
-    */
     </script>
     <main>
         <div class="container-top">
