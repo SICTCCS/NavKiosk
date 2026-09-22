@@ -72,7 +72,7 @@
             });
             */
             map.setMaxBounds(map.getBounds().pad(0.15));    //USER GEOLOCATION
-            function onLocationFound(e) {                   //USER GEOLOCATION FUNC
+            function onLocationFound(e) {                   //USER GEOLOCATION FUNC - sourced from leaflet example 
                 const radius = e.accuracy / 8;
 
                 const locationMarker = L.marker(e.latlng).addTo(map)
