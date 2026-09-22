@@ -53,25 +53,41 @@
     <div style="display: flexbox;"><h2 id="welcome">Welcome!</h2></div>
     <div id="map"></div>
     <script>
-                var map = L.map('map', {
-                    zoomControl: false,
-                    attributionControl: true
-                }).setView([38.01194, -87.53088], 18);
-                L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                    maxZoom: 22,
-                    minZoom: 19,
-                    attribution:'&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> | SICTC CS Class'
-                }).addTo(map);
-                
-                setTimeout(function() {
-                    map.invalidateSize();
-                }, 100);
-                map.locate({ setView: true, maxZoom: 18, enableHighAccuracy: true , follow: true});
-                map.on('locationfound', function(e) {
-                    L.marker(e.latlng).addTo(map);
-                    L.circle(e.latlng, e.accuracy).addTo(map);
-                });
-                map.setMaxBounds(map.getBounds().pad(0.15));
+            var map = L.map('map', {
+                zoomControl: false,
+                attributionControl: true
+            }).setView([38.01194, -87.53088], 18);
+            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 22,
+                minZoom: 19,
+                attribution:'&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> | SICTC CS Class'
+            }).addTo(map);
+            
+            /*setTimeout(function() {
+                map.invalidateSize();
+            }, 100);
+            map.on('locationfound', function(e) {
+                L.marker(e.latlng).addTo(map);
+                L.circle(e.latlng, e.accuracy).addTo(map);
+            });
+            */
+            map.setMaxBounds(map.getBounds().pad(0.15));    //USER GEOLOCATION
+            function onLocationFound(e) {                   //USER GEOLOCATION FUNC
+                const radius = e.accuracy / 8;
+
+                const locationMarker = L.marker(e.latlng).addTo(map)
+
+                const locationCircle = L.circle(e.latlng, radius).addTo(map);
+            }
+
+            function onLocationError(e) {
+                alert(e.message);
+            }
+
+            map.on('locationfound', onLocationFound);
+            map.on('locationerror', onLocationError);
+            map.locate({ setView: true, maxZoom: 18, enableHighAccuracy: true , follow: true});
+
                 // Polygon Zone - Start
                 
                     // Define coordinates [lat, lng]
