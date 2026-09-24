@@ -27,99 +27,139 @@
             return document.getElementById("map");
         }
 
-        function buildingConstruction(){
+        function exerciseScience(){
             var img = resetMapToImage();
-            img.src="drawMaps/BuildingConstruction.png";
-            return false;
-        }
-        function graphicCommunication(){
-            var img = resetMapToImage();
-            img.src="drawMaps/GraphicCommunication.png";
+            img.src="drawMaps/exerciseScience.png";
             return false;
         }
         function hvac(){
             var img = resetMapToImage();
-            img.src="drawMaps/HVAC.png";
+            img.src="drawMaps/hvac.png";
             return false;
         }
-        function cs(){
+        function buildingConstruction(){
             var img = resetMapToImage();
-            img.src="drawMaps/CompScience.png";
+            img.src="drawMaps/buildingConstruction.png";
+            return false;
+        }
+        function electricalTechnology(){
+            var img = resetMapToImage();
+            img.src="drawMaps/electricalTechnology.png";
+            return false;
+        }
+        function manufacturingTechnology(){
+            var img = resetMapToImage();
+            img.src="drawMaps/manufacturingTechnology.png";
+            return false;
+        }
+        function precisionMachine(){
+            var img = resetMapToImage();
+            img.src="drawMaps/precisionMachine.png";
+            return false;
+        }
+        function weldingTechnology(){
+            var img = resetMapToImage();
+            img.src="drawMaps/weldingTechnology.png";
+            return false;
+        }
+        function healthSciences(){
+            var img = resetMapToImage();
+            img.src="drawMaps/healthSciences.png";
+            return false;
+        }
+        function computerSciences(){
+            var img = resetMapToImage();
+            img.src="drawMaps/computerScieces.png";
             return false;
         }
         function cyberSecurity(){
             var img = resetMapToImage();
-            img.src="drawMaps/Cybersecurity.png";
+            img.src="drawMaps/cyberSecurity.png";
             return false;
         }
-        function electricity(){
-            var img = resetMapToImage();
-            img.src="drawMaps/Electricity.png";
-            return false;
-        }
-        function publicSafety(){
-            var img = resetMapToImage();
-            img.src="drawMaps/PublicSafety.png";
-            return false;
-        }
-        function exercise(){
-            var img = resetMapToImage();
-            img.src="drawMaps/Exercise.png";
-            return false;
-        }
-        function welding(){
-            var img = resetMapToImage();
-            img.src="drawMaps/Welding.png";
-            return false;
-        }
-        function precision(){
-            var img = resetMapToImage();
-            img.src="drawMaps/Precision.png";
-            return false;
-        }
-        function engineering(){
+        function Engineering(){
             var img = resetMapToImage();
             img.src="drawMaps/Engineering.png";
             return false;
         }
-        function diesel(){
+        function criminalJustice(){
             var img = resetMapToImage();
-            img.src="drawMaps/DieselService.png";
+            img.src="drawMaps/criminalJustice.png";
             return false;
         }
-        function vet(){
+        function culinaryArts(){
             var img = resetMapToImage();
-            img.src="drawMaps/VetScience.png";
+            img.src="drawMaps/culinaryArts.png";
             return false;
         }
-        function radio(){
+        function assemblyHall(){
             var img = resetMapToImage();
-            img.src="drawMaps/Radio.png";
+            img.src="drawMaps/assemblyHall.png";
             return false;
         }
-        function autoCollision(){
+        function cosmetology(){
             var img = resetMapToImage();
-            img.src="drawMaps/AutoCollision.png";
+            img.src="drawMaps/cosmetology.png";
             return false;
         }
-        function autoService(){
+        function mechanicalRoom(){
             var img = resetMapToImage();
-            img.src="drawMaps/AutomotiveService.png";
+            img.src="drawMaps/mechanicalRoom.png";
             return false;
         }
-        function culinary(){
+        function dieselService(){
             var img = resetMapToImage();
-            img.src="drawMaps/CulinaryArts.png";
+            img.src="drawMaps/dieselService.png";
             return false;
         }
-        function advManufacturing(){
+        function automotiveService(){
             var img = resetMapToImage();
-            img.src="drawMaps/AdvManufacturing.png";
+            img.src="drawMaps/automotiveService.png";
             return false;
         }
-        function healthScience(){
+        function automotiveCollision(){
             var img = resetMapToImage();
-            img.src="drawMaps/HealthSciences.png";
+            img.src="drawMaps/automotiveCollision.png";
+            return false;
+        }
+        function mediaCommunication(){
+            var img = resetMapToImage();
+            img.src="drawMaps/mediaCommunication.png";
+            return false;
+        }
+        function vetScience(){
+            var img = resetMapToImage();
+            img.src="drawMaps/vetScience.png";
+            return false;
+        }
+        function Resources(){
+            var img = resetMapToImage();
+            img.src="drawMaps/Resources.png";
+            return false;
+        }
+        function administrationOffice(){
+            var img = resetMapToImage();
+            img.src="drawMaps/administrationOffice.png";
+            return false;
+        }
+        function officeInnovation(){
+            var img = resetMapToImage();
+            img.src="drawMaps/officeInnovation.png";
+            return false;
+        }
+        function graphicCommunications(){
+            var img = resetMapToImage();
+            img.src="drawMaps/graphicCommunications.png";
+            return false;
+        }
+        function healthSciencesProfessionals(){
+            var img = resetMapToImage();
+            img.src="drawMaps/healthSciencesProfessional.png";
+            return false;
+        }
+         function virtualAcademy(){
+            var img = resetMapToImage();
+            img.src="drawMaps/virtualAcademy.png";
             return false;
         }
         var mapInitialized = false;
@@ -142,235 +182,387 @@
                 // Polygon Zone - Start
                 
                     // Define coordinates [lat, lng]
-                    var officeCoords = [            // right-click on a point on the map in the actual openstreetmap website and in the menu you can copy the coordinates of that point
-                            [38.011015,-87.530194],
-                            [38.011140,-87.529956],
-                            [38.011252,-87.530101],
-                            [38.011101,-87.530323]  // you can add more points by continuing the array
+                    var exerciseScienceCoords = [            // right-click on a point on the map in the actual openstreetmap website and in the menu you can copy the coordinates of that point
+                            [38.011737,-87.531821],
+                            [38.011612,-87.531617],
+                            [38.011496,-87.531727],
+                            [38.011622,-87.531937]  // you can add more points by continuing the array
                                     ];
 
                     // Create polygon with style options
-                    var office = L.polygon(officeCoords, {  // this actually adds the polygon to the map, the variable above this one simply defines the coordinates at where it will be added
-                        color: 'red',   // outline color
-                        fillColor: '#f03',
+                    var exerciseScienceClass = L.polygon(exerciseScienceCoords, {  // this actually adds the polygon to the map, the variable above this one simply defines the coordinates at where it will be added
+                        color: 'deepSpaceblue',   // outline color
+                        fillColor: '#243D57',
                         fillOpacity: 0.5
                     }).addTo(map);
 
-                    var auditoriumCoords = [
-                            [38.011297,-87.529922],
-                            [38.011438,-87.529534],
-                            [38.011346,-87.529487],
-                            [38.011299,-87.529684],
-                            [38.011282,-87.529673],
-                            [38.011208,-87.529824]
+                    var hvacCoords = [
+                            [38.011606,-87.531606],
+                            [38.011509,-87.531430],
+                            [38.011349,-87.531580],
+                            [38.011415,-87.531692],
+                            [38.011445,-87.531654],
+                            [38.011489,-87.531715]
                                     ];
 
-                    var auditorium = L.polygon(auditoriumCoords, {
-                        color: 'red',
-                        fillColor: '#f03',
+                    var hvacClass = L.polygon(hvacCoord, {
+                        color: 'BalticBlue',
+                        fillColor: '#436688',
                         fillOpacity: 0.5
                     }).addTo(map);
 
-                    var culinaryCoords = [
-                            [38.011484,-87.530226],
-                            [38.011513,-87.530179],
-                            [38.011594,-87.530205],
-                            [38.011650,-87.530172],
-                            [38.011624,-87.530061],
-                            [38.011686,-87.530026],
-                            [38.011648,-87.529893],
-                            [38.011695,-87.529836],
-                            [38.011518,-87.529690],
-                            [38.011329,-87.530019]
+                    var buildingConstructionCoords = [
+                            [38.011501,-87.531418],
+                            [38.011332,-87.531125],
+                            [38.011164,-87.531279],
+                            [38.011350,-87.531568],
                                     ];
 
-                    var culinaryClass = L.polygon(culinaryCoords, {
-                        color: 'red',
-                        fillColor: '#f03',
+                    var buildingConstructionClass = L.polygon(buildingConstructionCoords, {
+                        color: 'dustyDenim',
+                        fillColor: '#618FB8',
                         fillOpacity: 0.5
                     }).addTo(map);
 
-                    var crimeCoords = [
-                            [38.011416,-87.530459],
-                            [38.011505,-87.530451],
-                            [38.011504,-87.530367],
-                            [38.011453,-87.530284],
-                            [38.011386,-87.530398]
+                    var electricalTechnologyCoords = [
+                            [38.011325,-87.531112],
+                            [38.011207,-87.530913],
+                            [38.011128,-87.530985],
+                            [38.011253,-87.531182]
                                     ];
 
-                    var crimeClass = L.polygon(crimeCoords, {
-                        color: 'red',
-                        fillColor: '#f03',
+                    var electricalTechnologyClass = L.polygon(electricalTechnologyeCoords, {
+                        color: 'jasmine',
+                        fillColor: '#F2D185',
                         fillOpacity: 0.5
                     }).addTo(map);
 
-                    var architectureCoords = [
-                            [38.011296,-87.530580],
-                            [38.011312,-87.530556],
-                            [38.011413,-87.530553],
-                            [38.011413,-87.530463],
-                            [38.011387,-87.530402],
-                            [38.011332,-87.530399],
-                            [38.011278,-87.530427]
-                            
+                    var manufacturingTechnologyCoords = [
+                            [38.011182,-87.530761],
+                            [38.010936,-87.531011],
+                            [38.010847,-87.530864],
+                            [38.011082,-87.530626]
                                     ];
 
-                    var architectureClass = L.polygon(architectureCoords, {
-                        color: 'red',
-                        fillColor: '#f03',
+                    var manufacturingTechnologyClass = L.polygon(manufacturingTechnologyCoords, {
+                        color: 'wheat',
+                        fillColor: '#FA57BC',
                         fillOpacity: 0.5
                     }).addTo(map);
 
-                    var manufacturingCoords = [
-                            [38.011183,-87.530760],
-                            [38.011079,-87.530619],
-                            [38.010846,-87.530866],
-                            [38.010935,-87.531006]
+                    var precisionMachineCoords = [
+                            [38.011073,-87.530612],
+                            [38.010840,-87.530855],
+                            [38.010767,-87.530732],
+                            [38.010997,-87.530497]
                                     ];
 
-                    var manufacturingClass = L.polygon(manufacturingCoords, {
-                        color: 'red',
-                        fillColor: '#f03',
+                    var precisionMachineClass = L.polygon(precisionMachineCoords, {
+                        color: 'babyblue',
+                        fillColor: '#85C5E4',
                         fillOpacity: 0.5
                     }).addTo(map);
 
-                    var precisionCoords = [
-                            [38.011077,-87.530616],
-                            [38.010998,-87.530489],
-                            [38.010767,-87.530733],
-                            [38.010843,-87.530856]
+                    var weldingTechnologyCoords = [
+                            [38.010991,-87.530485],
+                            [38.010762,-87.530713],
+                            [38.010663,-87.530573],
+                            [38.010905,-87.530352]
                                     ];
 
-                    var HVAC= L.polygon(HVACCoords, {
-                        color: 'red',
-                        fillColor: '#f03',
+                    var weldingTechnologyClass= L.polygon(weldingTechnologyCoords, {
+                        color: 'frostedBlue',
+                        fillColor: '#ADE8F4',
                         fillOpacity: 0.5
                     }).addTo(map);
 
-                    var precisionCoords = [
-                            [38.011341,-87.531582],
-                            [38.011509,-87.531429],
-                            [38.011407,-87.531686],
-                            [38.011441,-87.531657],
-                            [38.011487,-87.531721],
-                            [38.011612,-87.531613]
+                    var healthScienceCoords = [
+                            [38.011803,-87.531450],
+                            [38.011917,-87.531343],
+                            [38.011845,-87.531228],
+                            [38.011860,-87.531213],
+                            [38.011816,-87.531146],
+                            [38.011822,-87.531137],
+                            [38.011776,-87.531055],
+                            [38.011761,-87.531056],
+                            [38.011720,-87.530997],
+                            [38.011610,-87.531096]
                                     ];
 
-                    var ExerciseScienceClass = L.polygon(ExerciseCoords, {
-                        color: 'red',
-                        fillColor: '#f03',
+                    var healthScienceClass = L.polygon(healthScienceCoords, {
+                        color: 'cadetblue',
+                        fillColor: '#5F9EA0',
                         fillOpacity: 0.5
                     }).addTo(map);
 
-                    var electricityCoords = [
-                            [38.011497,-87.531733],
-                            [38.011621,-87.531933],
-                            [38.011734,-87.531819],
-                            [38.011620,-87.531625]
+                    var computerSciencesCoords = [
+                            [38.011557,-87.531043],
+                            [38.011697,-87.530914],
+                            [38.011633,-87.530817],
+                            [38.011515,-87.530946]
                                     ];
 
-                    var electricityClass = L.polygon(electricityCoords, {
-                        color: 'red',
-                        fillColor: '#f03',
-                        fillOpacity: 0.5
-                    }).addTo(map);
-
-                    var buildingCoords = [
-                            [38.011507,-87.531424],
-                            [38.011333,-87.531119],
-                            [38.011165,-87.531283],
-                            [38.011343,-87.531578]
-                                    ];
-
-                    var buildingClass = L.polygon(buildingCoords, {
-                        color: 'red',
-                        fillColor: '#f03',
+                    var computerSciencesClass = L.polygon(omputerSciencesCoords, {
+                        color: 'beige',
+                        fillColor: '#F5F5DC',
                         fillOpacity: 0.5
                     }).addTo(map);
 
                     var cyberSecurityCoords = [
-                           [38.011393,-87.530770],
-                           [38.011436,-87.530730],
-                           [38.011508,-87.530828],
-                           [38.011459,-87.530867]
-                                ];
+                            [38.011469,-87.530878],
+                            [38.011512,-87.530833],
+                            [38.011445,-87.530725],
+                            [38.011400,-87.530770]
+                                    ];
 
                     var cyberSecurityClass = L.polygon(cyberSecurityCoords, {
-                        color: 'red',
-                        fillColor: '#f03',
+                        color: 'bisque',
+                        fillColor: '#FFE4C4',
                         fillOpacity: 0.5
                     }).addTo(map);
 
-                    var compurerScienceCoord = [
-                       [38.011515,-87.530943],
-                       [38.011640,-87.530819],
-                       [38.011693,-87.530903],
-                       [38.011570,-87.531036]
-                     ];
-                     var compurerScienceClass = L.polygon(compurerScienceCoords, {
-                    color: 'red',
-                        fillColor: '#f03',
+                      var EngineeringCoords = [
+                            [38.011301,-87.530579],
+                            [38.011312,-87.530555],
+                            [38.011414,-87.530555],
+                            [38.011411,-87.530461],
+                            [38.011386,-87.530402],
+                            [38.011329,-87.530391],
+                            [38.011276,-87.530420],
+                            [38.011238,-87.530502]
+                                    ];
+
+                    var EngineeringClass = L.polygon(EngineeringCoords, {
+                        color: 'LimeCream',
+                        fillColor: '#D9ED92',
                         fillOpacity: 0.5
                     }).addTo(map);
-                
-                     var HealthSciencesCoords = [
-                        [38.011612,-87.531104],
-                        [38.011719,-87.530998],
-                        [38.011763,-87.531060],
-                        [38.011779,-87.531056],
-                        [38.011817,-87.531135],
-                        [38.011819,-87.531149],
-                        [38.011859,-87.531213],
-                        [38.011848,-87.531234],
-                        [38.011913,-87.531340],
-                        [38.011790,-87.531442]
-                    ];
-                
-                
-                     var HealthSciencesClass = L.polygon(HealthSciencesCoords, {
-                    color: 'red',
-                        fillColor: '#f03',
+
+                    var criminalJusticeCoords = [
+                            [38.011421,-87.530461],
+                            [38.011505,-87.530451],
+                            [38.011507,-87.530368],
+                            [38.011459,-87.530290],
+                            [38.011397,-87.530396]
+                                    ];
+
+                    var criminalJusticeClass = L.polygon(criminalJusticeCoords, {
+                        color: 'LightGreen',
+                        fillColor: '#B5548C',
                         fillOpacity: 0.5
                     }).addTo(map);
-                 
+
+                    var culinaryArtsCoords = [
+                            [38.011486,-87.530221],
+                            [38.011512,-87.530175],
+                            [38.011595,-87.530203],
+                            [38.011650,-87.530171],
+                            [38.011622,-87.530060],
+                            [38.011689,-87.530023],
+                            [38.011648,-87.529892],
+                            [38.011692,-87.529834],
+                            [38.011515,-87.529694],
+                            [38.011337,-87.530019]
+                                    ];
+
+                    var culinaryArtsClass = L.polygon(culinaryArtsCoords, {
+                        color: 'LightGreen',
+                        fillColor: '#99D98C',
+                        fillOpacity: 0.5
+                    }).addTo(map);
+
+                    var assemblyHallCoords = [
+                            [38.011212,-87.529826],
+                            [38.011296,-87.529919],
+                            [38.011440,-87.529537],
+                            [38.011350,-87.529488],
+                            [38.011303,-87.529683],
+                            [38.011284,-87.529681]
+                                    ];
+
+                    var assemblyHallClass = L.polygon(assemblyHallCoords, {
+                        color: 'Emerald',
+                        fillColor: '#76C893',
+                        fillOpacity: 0.5
+                    }).addTo(map);
+
+                    var cosmetologyCoords = [
+                            [38.011490,-87.529498],
+                            [38.011544,-87.529301],
+                            [38.011400,-87.529246],
+                            [38.011355,-87.529447]
+                                    ];
+
+                    var cosmetologyClass = L.polygon(cosmetologyCoords, {
+                        color: 'OceanMist',
+                        fillColor: '#52B69A',
+                        fillOpacity: 0.5
+                    }).addTo(map);
+
+                    var  mechanicalRoomCoords = [
+                            [38.011584,-87.529525],
+                            [38.011542,-87.529299],
+                            [38.011526,-87.529401],
+                            [38.011502,-87.529500]
+                                    ];
+
+                    var mechanicalRoomClass = L.polygon(mechanicalRoomCoords, {
+                        color: 'TropicalTeal',
+                        fillColor: '#34A0A4',
+                        fillOpacity: 0.5
+                    }).addTo(map);
+
+                    var dieselServiceCoords = [
+                            [38.012096,-87.529720],
+                            [38.012174,-87.529369],
+                            [38.011999,-87.529302],
+                            [38.011912,-87.529661]
+                                    ];
+
+                    var dieselServiceeClass = L.polygon(dieselServiceCoords, {
+                        color: 'bondiBlue',
+                        fillColor: '#168AAD',
+                        fillOpacity: 0.5
+                    }).addTo(map);
+
+                    var automotiveServiceCoords = [
+                            [38.012111,-87.529731],
+                            [38.012196,-87.529318],
+                            [38.012576,-87.529463],
+                            [38.012502,-87.529854]
+                                    ];
+
+                    var automotiveServiceClass = L.polygon(automotiveServiceCoords, {
+                        color: 'Cerulean',
+                        fillColor: '#1A759F',
+                        fillOpacity: 0.5
+                    }).addTo(map);
+
+                    var automotiveCollisionCoords = [
+                            [38.012705,-87.529922],
+                            [38.012747,-87.529742],
+                            [38.012549,-87.529664],
+                            [38.012510,-87.529857]
+                                    ];
+
+                    var automotiveCollisionClass = L.polygon(automotiveCollisionCoords, {
+                        color: 'BalticBlue',
+                        fillColor: '#1E6091',
+                        fillOpacity: 0.5
+                    }).addTo(map);
+
                     var mediaCommunicationCoords = [
-                    [38.012496,-87.530375],
-                    [38.012561,-87.530050],
-                    [38.012789,-87.530124],
-                    [38.012767,-87.530202],
-                    [38.012711,-87.530196],
-                    [38.012653,-87.530427],
-                ];
- 
-                     var mediaCommunicationClass = L.polygon(mediaCommunicationCoords, {
-                    color: 'red',
-                        fillColor: '#f03',
+                            [38.012789,-87.530128],
+                            [38.012770,-87.530211],
+                            [38.012709,-87.530195],
+                            [38.012654,-87.530434],
+                            [38.012506,-87.530378],
+                            [38.012568,-87.530050]
+                                    ];
+
+                    var mediaCommunicationClass = L.polygon(mediaCommunicationCoords, {
+                        color: 'YaleBlue',
+                        fillColor: '#184E77',
                         fillOpacity: 0.5
                     }).addTo(map);
-
-                     var VetScienceCoords = [
-                    [38.012315,-87.530174],
-                    [38.012355,-87.529993],
-                    [38.012476,-87.530040],
-                    [38.012443,-87.530211]
-                ];
                     
-                    var VetScienceClass = L.polygon(VetScienceCoords, {
-                        color: 'red',
-                        fillColor: '#f03',
+                    var vetScienceCoords = [
+                            [38.012485,-87.530045],
+                            [38.012441,-87.530222],
+                            [38.012322,-87.530176],
+                            [38.012358,-87.529997]
+                                    ];
+
+                    var vetScienceClass = L.polygon(vetScienceCoords, {
+                        color: 'AliceBlue',
+                        fillColor: '#EDF2FB',
                         fillOpacity: 0.5
                     }).addTo(map);
                     
                     var ResourcesCoords = [
-                        [38.012276,-87.530336];
-                        
+                            [38.012352,-87.529999],
+                            [38.012276,-87.530337],
+                            [38.012153,-87.530297],
+                            [38.012185,-87.530128],
+                            [38.012054,-87.530072],
+                            [38.012090,-87.529897]
+                                    ];
 
-                    ]
+                    var  ResourcesClass = L.polygon(ResourcesCoords, {
+                        color: 'Periwinkle',
+                        fillColor: '#C1D3FE',
+                        fillOpacity: 0.5
+                    }).addTo(map);
+                    
+                    var administrationOfficeCoords = [
+                            [38.011253,-87.530100],
+                            [38.011103,-87.530317],
+                            [38.011019,-87.530191],
+                            [38.011142,-87.529960]
+                                    ];
 
-                
+                    var administrationOfficeClass = L.polygon(administrationOfficeCoords, {
+                        color: 'Periwinkle',
+                        fillColor: '#B6CCFE',
+                        fillOpacity: 0.5
+                    }).addTo(map);
+
+                    var officeInnovationCoords = [
+                            [38.011136,-87.529960],
+                            [38.011081,-87.530060],
+                            [38.010952,-87.529944],
+                            [38.010989,-87.529853]
+                                    ];
+
+                    var officeInnovationClass = L.polygon(officeInnovationCoords, {
+                        color: 'BabyBlueice',
+                        fillColor: '#ABC4FF',
+                        fillOpacity: 0.5
+                    }).addTo(map);
+
+                    var graphicCommunicationCoords = [
+                            [38.010945,-87.530002],
+                            [38.010712,-87.530227],
+                            [38.010661,-87.530137],
+                            [38.010883,-87.529930]
+                                    ];
+
+                    var graphicCommunicationOfficeClass = L.polygon(graphicCommunicationCoords, {
+                        color: 'Periwinkle',
+                        fillColor: '#BBD0FF',
+                        fillOpacity: 0.5
+                    }).addTo(map);
+
+                    var healthSciencesProfessionalsCoords = [
+                            [38.010986,-87.529710],
+                            [38.011094,-87.529236],
+                            [38.010900,-87.529691],
+                            [38.011007,-87.529208]
+                                    ];
+
+                    var healthSciencesProfessionalsClass = L.polygon(healthSciencesProfessionalsCoords, {
+                        color: 'Periwinkle',
+                        fillColor: '#B8C0FF',
+                        fillOpacity: 0.5
+                    }).addTo(map);
+
+                    var virtualAcademyCoords = [
+                            [38.011092,-87.529743],
+                            [38.011187,-87.529327],
+                            [38.011026,-87.529707],
+                            [38.011026,-87.529707]
+                                    ];
+
+                    var virtualAcademyClass = L.polygon(virtualAcademyCoords, {
+                        color: 'Mauve',
+                        fillColor: '#C8B6FF',
+                        fillOpacity: 0.5
+                    }).addTo(map);
+
+                    
+                    
 
 
-                        
                 // Polygon Zone - Stop
 
                 setTimeout(function() {
