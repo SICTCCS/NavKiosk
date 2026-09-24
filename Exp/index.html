@@ -50,7 +50,7 @@
 </head>
 
 <body>
-    <div style="display: flexbox;"><h2 id="welcome">Welcome!</h2></div>
+    <div id="title-container" style="display: flexbox;"><h2 id="welcome">SICTC Map</h2></div>
     <div id="map"></div>
     <script>
             var map = L.map('map', {
@@ -79,7 +79,7 @@
 
                 const locationCircle = L.circle(e.latlng, radius).addTo(map);
             }
-
+        
             function onLocationError(e) {
                 alert(e.message);
             }
@@ -320,9 +320,10 @@
                 // map.options.maxBoundsViscosity = 1.0;
     </script>
     <!-- the below code is outdated and, while it allowed easier popups for the classes and easier configuration, it disabled any tracking functionality. I have left this here for any future reference whatsoever. -->
+
     <!--<iframe id="iframe" allowfullscreen allow="geolocation *" src="//umap.openstreetmap.fr/en/map/openhousemapsictc_1446596?scaleControl=false&miniMapControl=false&scrollWheelZoom=false&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=true"></iframe>-->
     <div id="btns">
-        <a href="https://sictc.evscschools.com/" style="width:50%;"><button>sictc.com</button></a>
+        <a href="https://sictc.evscschools.com/" style="width:50%;"><button>SICTC Website</button></a>
         <a href="https://applytosictc.com/"><button>Apply Now!</button></a>
     </div>
 </body>
