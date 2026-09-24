@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- This page is purely for Pro-Boards, the mobile page is under the 'Exp' folder -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -15,7 +15,7 @@
     <title>Nav Kiosk</title>
 </head>
 <body>
-    <script>
+<script>
         function resetMapToImage() {
             var mapDiv = document.getElementById("map");
             if (mapInitialized) {
@@ -162,6 +162,13 @@
             img.src="drawMaps/virtualAcademy.png";
             return false;
         }
+        function cosmetology(){
+            var img = resetMapToImage();
+            img.src="drawMaps/Cosmetology.png";
+            return false;
+        }
+        
+        //      This section is commented out as it is now deprecated 
         var mapInitialized = false;
         function nav(){
             var mapDiv = document.getElementById("map");
@@ -178,7 +185,7 @@
                     maxZoom: 19,
                     minZoom: 17
                 }).addTo(map);
-                
+                /*
                 // Polygon Zone - Start
                 
                     // Define coordinates [lat, lng]
@@ -576,6 +583,7 @@
                 });
                 map.setMaxBounds(map.getBounds().pad(0.15));
                 // map.options.maxBoundsViscosity = 1.0;
+                */
             }
             return false;
         }
@@ -597,7 +605,7 @@
                     <li><button class="classBTN" onclick="autoCollision()">Automotive Collision</button></li>
                     <li><button class="classBTN" onclick="vet()">Veterinary Science</button></li>
                     <li><button class="classBTN" onclick="radio()">Radio/TV</button></li>
-                    <li><button class="navBTN" onclick="nav()">Navigation</button></li>
+                    <li><button class="classBTN" onclick="cosmetology()">Cosmetology</button></li>
                 </ul>
             </div>
             <div class="center-image">
