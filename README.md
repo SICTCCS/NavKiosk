@@ -6,13 +6,13 @@ Navigation Page for the Promethean boards during Open House.
 Tracks user position using OpenStreeMap's API.
 
 ## Completed goals from previous semester
- - Map Updated
- - Tracker Integrated 75%
- - Mobile Concept
- - Tracker Built Out
- - Map Updated
+ - Map updated (Cosmetology)
+ - Tracker integrated 100%
+ - Mobile page
+ - GPS tracking accuracy improved
+ - Mobile UI smaller screen compatibility now supported
 
 ## Goals for next semester
- - Polish mobile UI to fit smaller screens
- - Upgrade GPS tracking accuracy (openstreetmap api) (may switch to another map API if easier)
- - Document how to update next year
+ - None as of right now
+ 
+If any future classes work on this project, Leaflet.js is very important and there is documentation in the code explaining how certain things work
