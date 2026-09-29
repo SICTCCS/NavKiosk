@@ -211,7 +211,7 @@
                             [38.011515,-87.530946]
                                     ];
 
-                    var computerSciencesClass = L.polygon(omputerSciencesCoords, {
+                    var computerSciencesClass = L.polygon(computerSciencesCoords, {
                         color: 'beige',
                         fillColor: '#F5F5DC',
                         fillOpacity: 0.5
@@ -309,10 +309,10 @@
                     }).addTo(map);
 
                     var  mechanicalRoomCoords = [
-                            [38.011584,-87.529525],
-                            [38.011542,-87.529299],
-                            [38.011526,-87.529401],
-                            [38.011502,-87.529500]
+                            [38.011608,-87.529429],
+                            [38.011529,-87.529396],
+                            [38.011499,-87.529499],
+                            [38.011587,-87.529527]
                                     ];
 
                     var mechanicalRoomClass = L.polygon(mechanicalRoomCoords, {
@@ -388,20 +388,20 @@
                         fillOpacity: 0.5
                     }).addTo(map);
                     
-                    var ResourcesCoords = [
-                            [38.012352,-87.529999],
-                            [38.012276,-87.530337],
-                            [38.012153,-87.530297],
-                            [38.012185,-87.530128],
-                            [38.012054,-87.530072],
-                            [38.012090,-87.529897]
-                                    ];
+                    // var ResourcesCoords = [
+                    //         [38.012352,-87.529999],
+                    //         [38.012276,-87.530337],
+                    //         [38.012153,-87.530297],
+                    //         [38.012185,-87.530128],
+                    //         [38.012054,-87.530072],
+                    //         [38.012090,-87.529897]
+                    //                 ];
 
-                    var  ResourcesClass = L.polygon(ResourcesCoords, {
-                        color: 'Periwinkle',
-                        fillColor: '#C1D3FE',
-                        fillOpacity: 0.5
-                    }).addTo(map);
+                    // var  ResourcesClass = L.polygon(ResourcesCoords, {
+                    //     color: 'Periwinkle',
+                    //     fillColor: '#C1D3FE',
+                    //     fillOpacity: 0.5
+                    // }).addTo(map);
                     
                     var administrationOfficeCoords = [
                             [38.011253,-87.530100],
@@ -443,10 +443,10 @@
                     }).addTo(map);
 
                     var healthSciencesProfessionalsCoords = [
-                            [38.010986,-87.529710],
-                            [38.011094,-87.529236],
-                            [38.010900,-87.529691],
-                            [38.011007,-87.529208]
+                            [38.010986,-87.529715],
+                            [38.011092,-87.529235],
+                            [38.011009,-87.529207],
+                            [38.010905,-87.529691]
                                     ];
 
                     var healthSciencesProfessionalsClass = L.polygon(healthSciencesProfessionalsCoords, {
@@ -456,10 +456,10 @@
                     }).addTo(map);
 
                     var virtualAcademyCoords = [
-                            [38.011092,-87.529743],
-                            [38.011187,-87.529327],
-                            [38.011026,-87.529707],
-                            [38.011026,-87.529707]
+                            [38.011095,-87.529745],
+                            [38.011190,-87.529325],
+                            [38.011119,-87.529299],
+                            [38.011026,-87.529711]
                                     ];
 
                     var virtualAcademyClass = L.polygon(virtualAcademyCoords, {
@@ -530,6 +530,9 @@
 
                     var vetMark = L.marker([38.012388,-87.530100]).addTo(map);
                     vetMark.bindPopup("<h1>Veterinary Science</h1>");
+                    
+                    var healthMark = L.marker([38.011752,-87.531218]).addTo(map);
+                    healthMark.bindPopup("<h1>Health Sciences</h1>");
 
                     
 
