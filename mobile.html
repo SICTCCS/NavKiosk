@@ -71,11 +71,23 @@
                 L.circle(e.latlng, e.accuracy).addTo(map);
             });
             */
-            map.setMaxBounds(map.getBounds().pad(0.15));    //USER GEOLOCATION
+
+            map.setMaxBounds(map.getBounds().pad(0.15));
+            
+            // defining custom icon parameters for user marker
+            const userIcon = L.icon({
+                iconUrl: "drawMaps/UserIcon.png",
+                iconSize: [38,38]
+
+            })
+
+
+
+            //USER GEOLOCATION
             function onLocationFound(e) {                   //USER GEOLOCATION FUNC - sourced from leaflet example 
                 const radius = e.accuracy / 8;
 
-                const locationMarker = L.marker(e.latlng).addTo(map)
+                const locationMarker = L.marker(e.latlng, { icon: userIcon }).addTo(map)
 
                 const locationCircle = L.circle(e.latlng, radius).addTo(map);
             }
