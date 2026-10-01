@@ -81,17 +81,19 @@
 
             })
 
+            let locationMarker = null;
+            let locationCircle = null;
             //USER GEOLOCATION
             function onLocationFound(e) {                   //USER GEOLOCATION FUNC - sourced from leaflet example 
-                if (!locationMarker) {
                 const radius = e.accuracy / 8;
-
-                const locationMarker = L.marker(e.latlng, { icon: userIcon }).addTo(map)
-                const locationCircle = L.circle(e.latlng, radius).addTo(map);
+                if (!locationMarker) {
+                    locationMarker = L.marker(e.latlng, { icon: userIcon }).addTo(map)
+                    locationCircle = L.circle(e.latlng, radius).addTo(map);
                 }
-                locationMarker.setLatLng(e.latlng);
-                locationCircle.setLatLng(e.latlng);
-                
+                else{
+                    locationMarker.setLatLng(e.latlng);
+                    locationCircle.setLatLng(e.latlng,radius);
+                }
             }
         
             function onLocationError(e) {
