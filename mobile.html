@@ -81,24 +81,26 @@
 
             })
 
-
-
             //USER GEOLOCATION
             function onLocationFound(e) {                   //USER GEOLOCATION FUNC - sourced from leaflet example 
+                if (!locationMarker) {
                 const radius = e.accuracy / 8;
 
                 const locationMarker = L.marker(e.latlng, { icon: userIcon }).addTo(map)
-
                 const locationCircle = L.circle(e.latlng, radius).addTo(map);
+                }
+                locationMarker.setLatLng(e.latlng);
+                locationCircle.setLatLng(e.latlng);
+                
             }
         
             function onLocationError(e) {
                 alert(e.message);
             }
-
+            
+            map.locate({ setView: true, maxZoom: 18, enableHighAccuracy: true , follow: true, watch: true});
             map.on('locationfound', onLocationFound);
             map.on('locationerror', onLocationError);
-            map.locate({ setView: true, maxZoom: 18, enableHighAccuracy: true , follow: true, watch: true});
 
                 // Polygon Zone - Start
                 
