@@ -4,6 +4,8 @@
         transform-origin: top left;
         width: 125%;
         height: 125%; */
+
+        overflow: hidden; /*This makes the page non-scrollable*/
     }
     body {
         background-color: #0C3D56;
@@ -35,7 +37,9 @@
         margin-top: 10px;
         height: 700px;
         width: 960px;
-        background-image: url("drawMaps/UpdatedMaster.png");
+        /* background-image: url("drawMaps/UpdatedMaster.png");     
+        // ^this added an image behind the map for the old design but is no longer needed*/
+        
         /* force the background to exactly fill the element's width and height */
         background-size: 100% 100%;
         background-position: center top;
@@ -61,21 +65,32 @@
 
     #btns {
         position:absolute;
-        bottom:10%;
+        bottom:5%;
         width:100%;
+    }
+
+
+    #refreshBTN {
+        position: relative;
+        align-items: center;
+        display: flexbox;
+        width: 60%;
+        left: 33%;
+        top: 61%;
     }
 
     button {
         color: #fff;
         font-size: 35px;
         cursor: pointer;
-        height: 100px;
-        width: 290px;
+        height: 100%;
+        width: 50%;
         margin: 5px; 
         border: solid 5px #707F43;
         background-color: white;
         color: black;
     }
+
     button.classBTN:hover {
         border: solid 5px white;
         background-color: #FF5757;
