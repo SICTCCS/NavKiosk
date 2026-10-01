@@ -80,12 +80,11 @@
                 iconSize: [38,38]
 
             })
-
+            //USER GEOLOCATION
             let locationMarker = null;
             let locationCircle = null;
-            //USER GEOLOCATION
             function onLocationFound(e) {                   //USER GEOLOCATION FUNC - sourced from leaflet example 
-                const radius = e.accuracy / 8;
+                const radius = e.accuracy / 2;
                 if (locationMarker === null) {
                     locationMarker = L.marker(e.latlng, { icon: userIcon }).addTo(map)
                     locationCircle = L.circle(e.latlng, radius).addTo(map);
@@ -560,7 +559,8 @@
     <!-- the below code is outdated and, while it allowed easier popups for the classes and easier configuration, it disabled any tracking functionality. I have left this here for any future reference whatsoever. -->
 
     <!--<iframe id="iframe" allowfullscreen allow="geolocation *" src="//umap.openstreetmap.fr/en/map/openhousemapsictc_1446596?scaleControl=false&miniMapControl=false&scrollWheelZoom=false&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=true"></iframe>-->
-    <div id="refreshBTN"><a href="https://sictccs.github.io/NavKiosk/mobile.html"><button style="height:85%; padding: 1vh; background-color:#707F43; border-color: #fff; color: #fff;">Refresh Location</button></a></div>
+    <!--<div id="refreshBTN"><a href="https://sictccs.github.io/NavKiosk/mobile.html"><button style="height:85%; padding: 1vh; background-color:#707F43; border-color: #fff; color: #fff;">Refresh Location</button></a></div>
+     This line (^) is for the old refresh button code, now that there is live updating there is no reason to have this button -->
     <div id="btns">
         <a href="https://sictc.evscschools.com/" style="width:50%;"><button>SICTC Website</button></a>
         <a href="https://applytosictc.com/"><button>Apply Now!</button></a>
