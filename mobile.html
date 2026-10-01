@@ -86,7 +86,7 @@
             //USER GEOLOCATION
             function onLocationFound(e) {                   //USER GEOLOCATION FUNC - sourced from leaflet example 
                 const radius = e.accuracy / 8;
-                if (!locationMarker) {
+                if (locationMarker === null) {
                     locationMarker = L.marker(e.latlng, { icon: userIcon }).addTo(map)
                     locationCircle = L.circle(e.latlng, radius).addTo(map);
                 }
