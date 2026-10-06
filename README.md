@@ -16,3 +16,7 @@ Tracks user position using OpenStreeMap's API.
  - None as of right now
  
 If any future classes work on this project, Leaflet.js is very important and there is documentation in the code explaining how certain things work
+
+### uMap reference
+The link for the uMap we used as a reference -
+       https://umap.openstreetmap.fr/en/map/openhousemapsictc_1446596#19/38.011393/-87.530262
